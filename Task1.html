@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function prime() {
+        var str = " ";
+        console.log("hii");
+
+        for (i = 10; i < 100; i++) {
+          var temp = true;
+          for (j = 2; j < i; j++) {
+            //console.log(j);
+            if (i % j == 0) {
+              temp = false;
+              break;
+            }
+          }
+          console.log(temp);
+          if (temp == true) {
+            str += "<ul> <li>" + i + "</li></ul>";
+            console.log(str);
+          }
+        }
+        document.getElementById("primeNumber").innerHTML = str;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="Button" value="Show Prime" name="prime1" onclick="prime()" />
+    <div id="primeNumber"></div>
+  </body>
+</html>
